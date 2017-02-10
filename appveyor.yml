@@ -1,13 +1,12 @@
 # Test against this version of Node.js
 environment:
-  matrix:
-    # node.js
-    - nodejs_version: "7"
+  # node.js
+  nodejs_version: "6"
 
   # Install scripts. (runs after cloning)
   install:
     # Get the latest stable version of Node.js or io.js
-    - ps: "Install-Product node $env:nodejs_version"
+    - ps: Install-Product node $env:nodejs_version
     #install modules
     - npm install
 
